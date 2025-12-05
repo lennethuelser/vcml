@@ -26,10 +26,8 @@ set(VCML_LINTER "" CACHE STRING "Code linter to use")
 
 include(cmake/common.cmake)
 find_github_repo(mwr "machineware-gmbh/mwr")
-cp ./FindLibCRIU.cmake ../vcml/mwr-src/cmake/FindLibCRIU.cmake
-cp ./FindLibCRIU.cmake ./cmake/FindLibCRIU.cmake
-#set(MWR_HOME "${CMAKE_CURRENT_SOURCE_DIR}/../vcml/mwr-src")
-#add_subdirectory(${MWR_HOME} ${CMAKE_CURRENT_BINARY_DIR}/mwr)
+file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/FindLibCRIU.cmake"
+     DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/../vcml/mwr-src/cmake")
 find_package(Git REQUIRED)
 find_package(SystemC "2.3.0" REQUIRED)
 
