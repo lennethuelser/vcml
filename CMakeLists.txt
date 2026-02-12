@@ -25,7 +25,7 @@ option(VCML_COVERAGE "Enable generation of code coverage data" OFF)
 set(VCML_LINTER "" CACHE STRING "Code linter to use")
 
 include(cmake/common.cmake)
-find_github_repo(mwr "machineware-gmbh/mwr" "v2026.02.10" "1b55d79f05f6ac884eadd2ba76407ce14309e35b")
+find_github_repo(mwr "machineware-gmbh/mwr" "1b55d79f05f6ac884eadd2ba76407ce14309e35b")
 file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/FindLibCRIU.cmake"
      DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/../vcml/mwr-src/cmake")
 find_package(Git REQUIRED)
